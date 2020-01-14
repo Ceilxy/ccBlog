@@ -10,13 +10,17 @@ module.exports = {
         repoLabel: 'My GitHub',
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'FirstBlog', link: '/blog/vuex/' }
+            { text: '我的博客', link: '/vue/vuex/' }
         ]
       },
       sidebar: [
         ['/', '首页'],
-        ['/blog/vuex', '我的第一篇博客']
+        ['/vue/vuex', '我的第一篇博客']
       ]
+        
+      
+
+      
   
 
 }
