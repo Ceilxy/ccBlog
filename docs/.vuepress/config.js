@@ -9,20 +9,14 @@ module.exports = {
         // 自定义仓库链接文字。
         repoLabel: 'My GitHub',
         nav: [
-            { text: 'Home', link: '/' },
-            { text: '我的博客', link: '/vue/' }
+          { text: 'Home', link: '/' },
+          { text: 'Blog', link: '/vue/' }
+        ],
+        sidebar: [
+          ['/', '首页'],
+          ['/vue/', 'Vue学习']
+          // ['/blog/', 'Axios']
         ]
-      },
-      sidebar: [
-          '/',
-          {
-            title: 'Vue学习',
-            // collapsable: false,
-            children: [
-              '/vue/',
-              '/blog/'
-            ]
-          }
-      ]  
+      }
 
 }

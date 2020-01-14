@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /vue-logo.png
-heroText: ccblog
+heroText: ccBlog
 tagline: 博客示例
 actionText: 快速上手 →
 actionLink: /

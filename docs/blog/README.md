@@ -1,12 +1,12 @@
 ---
-title: Vue学习
+title: Axios学习
 ---
 
 ## Axios学习
 
 基于promise的HTTP库，可以用在node.js和浏览器
 
-```
+```bash
 
 axios.get('user?IP=12345')
     .then(function(response){
