@@ -1,6 +1,6 @@
 
 module.exports = {
-    base: '/ccblog-demo/',
+    base: '/ccBlog/',
     title: '个人主页',
     description: 'Vuepress blog demo',
     themeConfig: {
@@ -10,17 +10,19 @@ module.exports = {
         repoLabel: 'My GitHub',
         nav: [
             { text: 'Home', link: '/' },
-            { text: '我的博客', link: '/vue/vuex/' }
+            { text: '我的博客', link: '/vue/' }
         ]
       },
       sidebar: [
-        ['/', '首页'],
-        ['/vue/vuex', '我的第一篇博客']
-      ]
-        
-      
-
-      
-  
+          '/',
+          {
+            title: 'Vue学习',
+            // collapsable: false,
+            children: [
+              '/vue/',
+              '/blog/'
+            ]
+          }
+      ]  
 
 }
