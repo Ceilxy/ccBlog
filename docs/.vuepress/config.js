@@ -14,13 +14,8 @@ module.exports = {
         ]
       },
       sidebar: [
-        '/',
-        {
-          title: 'Vuex状态管理',
-          children: [
-            '/blog/vuex/'
-          ]
-        }
+        ['/', '首页'],
+        ['/blog/vuex', '我的第一篇博客']
       ]
   
 
