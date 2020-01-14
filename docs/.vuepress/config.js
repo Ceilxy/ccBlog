@@ -14,8 +14,8 @@ module.exports = {
         ],
         sidebar: [
           ['/', '首页'],
-          ['/vue/', 'Vue学习']
-          // ['/blog/', 'Axios']
+          ['/vue/', 'Vue学习'],
+          ['/blog/', 'Axios']
         ]
       }
 
