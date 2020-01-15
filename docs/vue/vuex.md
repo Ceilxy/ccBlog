@@ -30,7 +30,7 @@ state是vuex的数据源，在根组件注册了store之后，可以在所有组
 #### 2. getters
 getters就像store的计算属性，它的返回值会更具依赖进行缓存，只要它的依赖值变化了，它就会被更新计算。
 getters用state作为第一个参数，接受其他 getters 作为第二个参数，如不需要用其他 getters，第二个参数可以省略。
-当一个组件需要用到多个state时，可以用...mapState来帮助我们生成属性
+当一个组件需要用到多个state时，可以用...mapState在组件里拿state的数据
 
 #### 3. mutation
 更改Vuex中状态的
@@ -38,7 +38,6 @@ mutation必须是同步的
 #### 4. action
 
 #### 5. module
-
 
 ### 在项目中引入vuex
 
