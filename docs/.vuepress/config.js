@@ -23,6 +23,7 @@ module.exports = {
             'one'
           ]
         },
+        smoothScroll: true,
         sidebarDepth: 2,
         lastUpdated: 'Last Updated'
       }
