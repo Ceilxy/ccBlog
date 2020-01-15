@@ -3,6 +3,9 @@ module.exports = {
     base: '/ccBlog/',
     title: '个人主页',
     description: 'Vuepress blog demo',
+    head: [
+      ['link', { rel: 'icon', href: '/img/logo.ico' }]
+  ],
     themeConfig: {
         // 你的GitHub仓库，请正确填写
         repo: 'https://github.com/Ceilxy/ccBlog',
@@ -10,13 +13,18 @@ module.exports = {
         repoLabel: 'My GitHub',
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Blog', link: '/vue/' }
+          { text: 'Blog', link: '/vue/vuex' },
+          { text: 'About', link: '/about/' }
         ],
-        sidebar: [
-          ['/', '首页'],
-          ['/vue/', 'Vue学习'],
-          ['/blog/', 'Axios']
-        ]
+        sidebar: {
+          '/vue/': [
+            'vuex',
+            'axios',
+            'one'
+          ]
+        },
+        sidebarDepth: 2,
+        lastUpdated: 'Last Updated'
       }
 
 }

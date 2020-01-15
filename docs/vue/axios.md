@@ -6,7 +6,7 @@ title: Axios学习
 
 基于promise的HTTP库，可以用在node.js和浏览器
 
-```bash
+```js
 
 axios.get('user?IP=12345')
     .then(function(response){
@@ -32,7 +32,7 @@ axios.get('user', {
 
 ** POST请求 **
 
-```
+```js
 axios.post('/user', {
     ...
 })
@@ -46,7 +46,7 @@ axios.post('/user', {
 
 ** 执行多个并发请求 **
 
-```
+```js
 function getUserAccount(){
     return axios.get('/user/12345')
 }
@@ -58,7 +58,7 @@ axios.all([getUserAccont(), getUserPermissions()])
 ```
 
 **Axios API**
-```
+```js
 //发送post请求
 axios({
     method: 'post',
@@ -71,7 +71,7 @@ axios({
 ```
 
 **请求方法的别名**
-```
+```js
 axios.request(config)
 axios.get(url[, config])
 axios.delete(url[, config])
@@ -83,13 +83,13 @@ axios.patch(url[, data[, config]])
 在使用别名方法时， url、method、data 这些属性都不必在配置中指定。
 
 **并发请求**
-```
+```js
 axios.all(iterable)
 axios.spread(callback)
 ```
 
 **创建实例**
-```
+```js
 var instance = axios.create({
     baseURL: 'https://...',
     timeout: 1000,
@@ -100,7 +100,7 @@ var instance = axios.create({
 
 **实例方法**
 指定的配置将与实例的配置合并
-```
+```js
 axios#request(config)
 axios#get(url[, config])
 axios#delete(url[, config])
@@ -112,7 +112,7 @@ axios#patch(url[, data[, config]])
 
 **取消**
 使用cancel toeken取消请求
-```
+```js
 var cancelToken = axios.CancelToken;
 var source = CancelToken.source();
 
@@ -129,5 +129,6 @@ axios.get('/user/12345',{
 ／／取消请求(message)
 source.cancel('...');
 ```
+
 
 
