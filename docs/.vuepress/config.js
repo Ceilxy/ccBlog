@@ -4,7 +4,7 @@ module.exports = {
     title: '个人主页',
     description: 'Vuepress blog demo',
     head: [
-      ['link', { rel: 'icon', href: '/img/logo.ico' }]
+      ['link', { rel: 'icon', href: '/logo.ico' }]
   ],
     themeConfig: {
         // 你的GitHub仓库，请正确填写
