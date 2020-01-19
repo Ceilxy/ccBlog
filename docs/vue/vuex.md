@@ -184,11 +184,14 @@ store.commit('handleAdd',item)
 ```
 **如果需要修改规则，那就要遵循Vue的规则**，如：
 ```js
+// 添加
 mutations: {
-  addDueDate(state, index) {
-    Vue.set(state.todos[index], 'dueDate', date)
+  addAge(state) {
+    Vue.set(state,"age",15)
   }
 }
+// 删除
+Vue.delete(state,'age')
 ```
 ::: tip
 需要注意的是Mutation**必须是同步的函数**，因为我们需要用mutation明确的来追踪到状态的变化，如果使用异步函数，则改变了初衷。
