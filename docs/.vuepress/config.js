@@ -13,14 +13,18 @@ module.exports = {
         repoLabel: 'My GitHub',
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Blog', link: '/vue/vuex' },
+          { text: 'Vue', link: '/vue/vuex' },
+          { text: 'JS', link: '/js/js-note' },
           { text: 'About', link: '/about/' }
         ],
         sidebar: {
           '/vue/': [
+            'vue-note',
             'vuex',
-            'axios',
-            'one'
+            'axios'
+          ],
+          '/js/': [
+            'js-note'
           ]
         },
         smoothScroll: true,

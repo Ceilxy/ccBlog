@@ -1,4 +1,4 @@
-## Vue基础语法
+## Vue基础语法(待补全)
 
 #### 环境搭建命令
 ```bash
@@ -22,4 +22,26 @@ Test 初始测试目录，可删除
 Index.html 首页入口文件，添加meta信息或统计代码
 Package.json 项目配置文件
 Readme.md 说明
+```
+
+#### ref的作用
+```js
+- 获取dom元素 $ref.id_name = 
+获取子组件中的data
+- 父组件中<HelloWorld ref="hello"/> 然后methods里this.$refs.hello.msg
+- 调用子组件
+       this.$refs.hello.open();
+- 子组件调用父组件
+    https://www.jianshu.com/p/623c8b009a85
+- 子组件methods中 
+    open(){this.$emit("refreshData");}
+
+    父组件中<HelloWorld ref="hello" @refreshData="getData"/>
+```
+
+#### vue易混淆事件
+```js
+@change：手动输入或者通过弹出框选择之后触发 @change='handleChange'
+trigger: ‘blur’ 表示“当失去焦点时（光标不显示的时候），触发提示
+{required: true, trigger: 'blur', validator: functionName}
 ```
