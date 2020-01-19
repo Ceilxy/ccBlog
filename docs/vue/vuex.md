@@ -341,6 +341,7 @@ computed: {
 ### mapState()
 <br>
 当组件中要一次传入多个状态时，用mapState()可以节省很多时间。
+
 ```js
 import { mapState } from 'vuex'
 
