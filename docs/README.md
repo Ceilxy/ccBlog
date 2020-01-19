@@ -1,10 +1,10 @@
 ---
 home: true
-heroImage: /vue-logo.png
-heroText: ccBlog
-tagline: 博客示例
-actionText: 快速上手 →
-actionLink: /
+heroImage: /logo.png
+heroText: CC Blog
+tagline: 从入门到放弃
+actionText: 开始
+actionLink: /vue/vuex
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

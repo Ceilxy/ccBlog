@@ -1,11 +1,8 @@
 
 module.exports = {
     base: '/ccBlog/',
-    title: '个人主页',
-    description: 'Vuepress blog demo',
-    head: [
-      ['link', { rel: 'icon', href: '/logo.ico' }]
-  ],
+    title: 'CC Blog',
+    description: 'Vuepress blog',
     themeConfig: {
         // 你的GitHub仓库，请正确填写
         repo: 'https://github.com/Ceilxy/ccBlog',
