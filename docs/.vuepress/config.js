@@ -24,7 +24,8 @@ module.exports = {
             'axios'
           ],
           '/js/': [
-            'js-note'
+            'js-note',
+            'http-server'
           ]
         },
         smoothScroll: true,
