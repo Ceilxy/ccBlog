@@ -1,14 +1,14 @@
-## Vue基础语法(待补全)
+# Vue基础语法(待补全)
 
-#### 环境搭建命令
+## 环境搭建命令
 ```bash
 vue init webpack vuedemo（项目名称）
 cd vuedemo（项目名称）
 npm run dev
 ```
 
-#### 目录结构
-```
+## 目录结构
+```bash
 Build: webpack相关代码
 Config: 配置目录，运行环境，端口
 Node_modules: npm加载的项目依赖文件
@@ -24,7 +24,7 @@ Package.json 项目配置文件
 Readme.md 说明
 ```
 
-#### ref的作用
+### ref的作用
 ```js
 - 获取dom元素 $ref.id_name = 
 获取子组件中的data
@@ -39,7 +39,7 @@ Readme.md 说明
     父组件中<HelloWorld ref="hello" @refreshData="getData"/>
 ```
 
-#### vue易混淆事件
+### vue易混淆事件
 ```js
 @change：手动输入或者通过弹出框选择之后触发 @change='handleChange'
 trigger: ‘blur’ 表示“当失去焦点时（光标不显示的时候），触发提示

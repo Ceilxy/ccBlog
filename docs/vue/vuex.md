@@ -1,7 +1,7 @@
 ---
-title: Vue学习
+title: Vuex学习
 ---
-# Vuex状态管理
+# Vuex文档笔记
 
 ## 概念
 Vuex是用于vue应用程序开发的**状态管理模式**。
@@ -90,7 +90,7 @@ getters就像**store的计算属性**，当我们需要对state里的数据做�
 getters: {
     // Getter 接受 state 作为其第一个参数
     // 对数据做过滤处理,但不改变数据的值！！！
-    todolist: state => {
+    DoneTodos: state => {
         return state.todos.filter(todo => todo.isDone)
     }
 }
@@ -101,7 +101,7 @@ getters: {
 getters: {
   // Getter 还也可以接收 getters 作为第二个参数
   // 读取其他getter里函数来做进一步处理
-  todoLength: (state, getters) => {
+  DoneTodosCount: (state, getters) => {
     return getters.todolist.length;
   }
 }
@@ -145,7 +145,7 @@ computed:{
 ```
 
 ### 3. mutation
-Mutation是改变store中状态的执行者，他可以通过提交mutation来更改状态。每个mutation会有一个字符串的事件类型（type）和一个回调函数（handler），回调函数就是我们实际更改状态的地方。
+Mutation是store中**改变状态的执行者**，他可以通过提交mutation来更改状态。每个mutation会有**一个字符串的事件类型（type）和一个回调函数（handler），回调函数就是我们实际更改状态的地方。**
 <span id="example3"></span>
 ```js
 const store = new Vuex.Store({
@@ -330,7 +330,31 @@ computed: {
     }),
 }
 ```
-
+## 命名空间
+模块内部的action，mutation和getter默认是注册在全局空间的，如果只想让他们在某一模块中生效，则要添加namespaced: true。
+```js
+// moduleA.js
+export default {
+    namespaced: true,
+    // ...
+}
+```
+声明之后，如果想要在组件中访问他需要带上路径，如
+```js
+import {mapActions, mapGetters} from 'vuex';
+export default {
+  computed: {
+  ...mapGetters({
+    name: 'moduleA/detail'
+  }),
+  methods: {
+    ...mapActions({
+      call: 'moduleA/callAction'
+    })
+  }
+  }
+}
+```
 
 ## Vuex帮手 map
 ::: tip
@@ -431,6 +455,8 @@ export default {
 }
 ```
 
+
+
 ## 在项目中使用vuex来管理状态
 
 1. 安装：```npm install vuex --save```
@@ -509,4 +535,5 @@ export default{
 ```
 >参考链接：<br>
 [Vue 组件间通信六种方式](https://mp.weixin.qq.com/s/XZ3BmZLY4OwwGm2Hbbepbg)<br>
-[Vuex白话教程](https://www.jianshu.com/p/120eaf50331c)
+[Vuex白话教程](https://www.jianshu.com/p/120eaf50331c)<br>
+[Vuex官方文档](https://vuex.vuejs.org/zh/)

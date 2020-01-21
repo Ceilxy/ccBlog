@@ -18,7 +18,7 @@ module.exports = {
           '/vue/': [
             'vue-note',
             'vuex',
-            'axios'
+            'mockJS'
           ],
           '/js/': [
             'js-note',
